@@ -1,0 +1,16 @@
+.navbar {
+    height: 7%;
+    background-color: #000000;
+}
+
+.navbar-brand img {
+    max-height: 3rem;
+}
+
+.navbar-item {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-text {
+    color: white;
+}

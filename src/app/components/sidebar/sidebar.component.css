@@ -1,0 +1,42 @@
+.menu-list li {
+    margin-bottom: 10px;
+}
+
+.menu-list li ul {
+    margin-left: 10px;
+}
+
+.menu-list li a {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.menu-list li a:hover {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    color: #000;
+}
+
+.menu-list li a.select {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+.menu-list li ul {
+    display: none;
+}
+
+.menu-list li ul.open {
+    display: block;
+}
+
+.sidebar {
+    height: 100%;
+    overflow-y: auto;
+    background-color: #000000;
+}

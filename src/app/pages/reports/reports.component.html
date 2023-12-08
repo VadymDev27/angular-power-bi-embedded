@@ -1,0 +1,43 @@
+<div class="reports-content">
+    <h1 class="title">Reportes</h1>
+
+    <div class="field">
+        <label class="label">Workspace:</label>
+        <div class="field has-addons">
+            <p class="control">
+                <span class="select">
+                    <select [(ngModel)]="groupId">
+                        <option [value]="undefined" >[Seleccionar]</option>
+                        <option *ngFor="let group of groups" [value]="group.id">{{group.name}}</option>
+                    </select>
+                </span>
+            </p>
+            <p class="control">
+                <a class="button is-primary" (click)="showReports()">
+                    Buscar
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <table *ngIf="reports != null" class="table">
+        <thead>
+            <tr>
+                <th>Nombre del reporte</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Nombre del reporte</th>
+                <th>Acciones</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr *ngFor="let report of reports">
+                <td>{{report.name}}</td>
+                <td><a class="button is-primary is-light" (click)="showReport(report.id)">Ver</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

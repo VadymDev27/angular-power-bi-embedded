@@ -1,0 +1,17 @@
+<div *ngIf="!hasError && powerbiDashboard.embedConfig != null" id="powerbi-report">
+    <powerbi-dashboard 
+        [embedConfig]="powerbiDashboard.embedConfig" 
+        [cssClassName]="powerbiDashboard.cssClassName" 
+        [eventHandlers]="powerbiDashboard.eventHandlers">
+    </powerbi-dashboard>
+</div>
+
+<div *ngIf="inProgress" class="centered-text">
+    <div class="circular-progress"></div>
+</div>
+
+<div *ngIf="hasError || powerbiDashboard.embedConfig == null" class="centered-text">
+    <h1>Error al cargar el reporte</h1>
+    <h2>Hubo un problema al cargar el dashboard, al parecer no tienes acceso al dashboard. Por
+        favor comuníquese con el área de soporte.</h2>
+</div>

@@ -1,0 +1,41 @@
+#powerbi-report {
+    width: 100%;
+    height: 80%;
+}
+
+.centered-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.circular-progress {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #ccc;
+    border-top-color: purple;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

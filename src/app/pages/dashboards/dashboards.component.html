@@ -1,0 +1,46 @@
+<div class="dashboards-content">
+    <h1 class="title">Dashboards</h1>
+
+    <div class="field">
+        <label class="label">Workspace:</label>
+        <div class="field has-addons">
+            <p class="control">
+                <span class="select">
+                    <select [(ngModel)]="groupId">
+                        <option [value]="undefined" >[Seleccionar]</option>
+                        <option *ngFor="let group of groups" [value]="group.id">{{group.name}}</option>
+                    </select>
+                </span>
+            </p>
+            <p class="control">
+                <a class="button is-primary" (click)="showDashboards()">
+                    Buscar
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <table *ngIf="dashboards != null" class="table">
+        <thead>
+            <tr>
+                <th>Nombre del dashboard</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Nombre del dashboard</th>
+                <th>Acciones</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr *ngFor="let dashboard of dashboards">
+                <td>{{dashboard.displayName}}</td>
+                <td>
+                    <a class="button is-primary is-light mr-1" (click)="showDashboard(dashboard.id)">Ver</a>
+                    <a class="button is-info is-light" (click)="showTiles(dashboard.id)">Tiles</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

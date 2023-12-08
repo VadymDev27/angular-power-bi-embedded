@@ -1,0 +1,25 @@
+<div class="tiles-content">
+    <h1 class="title">Tiles</h1>
+    <table *ngIf="tiles != null" class="table">
+        <thead>
+            <tr>
+                <th>Nombre del tile</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Nombre del tile</th>
+                <th>Acciones</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr *ngFor="let tile of tiles">
+                <td>{{tile.title}}</td>
+                <td>
+                    <a class="button is-primary is-light mr-1" (click)="showTile(tile.id)">Ver</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
